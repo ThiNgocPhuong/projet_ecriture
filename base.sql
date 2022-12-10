@@ -1,20 +1,29 @@
 create database Histoire;
 
 create table Idee(
-    id VARCHAR(10) NOT NULL,
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    categorie VARCHAR(100),
     description VARCHAR(8000),
-    date_idee DATE,
     nb_perso INTEGER,
-    nom_perso VARCHAR(8000)
+    date_idee DATE,
+    PRIMARY KEY (id)
 );
 
 create table Idee_Utiliser(
-     id_idee VARCHAR(10) NOT NULL,
+     id_idee INTEGER NOT NULL AUTO_INCREMENT,
      titre_histoire VARCHAR(60),
-     date_fin_ecriture DATE
+     date_fin_ecriture DATE,
+     resume VARCHAR(8000),
+     PRIMARY KEY (id_idee),
+     FOREIGN KEY (id_idee) REFERENCES Idee(id) 
 );
 
 create table Corriger(
-    id_idee VARCHAR(10) NOT NULL,
-    reponse VARCHAR(3)
+    id_idee INTEGER NOT NULL AUTO_INCREMENT,
+    reponse VARCHAR(3),
+    PRIMARY KEY (id_idee),
+    FOREIGN KEY (id_idee) REFERENCES Idee(id) 
 );
+
+CREATE USER Phuong IDENTIFIED BY "Ph@ntomhive";
+GRANT ALL PRIVILEGES ON *.* TO 'Phuong'; 
