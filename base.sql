@@ -3,7 +3,7 @@ create database Histoire;
 create table Idee(
     id INTEGER NOT NULL AUTO_INCREMENT,
     categorie VARCHAR(100),
-    description VARCHAR(8000),
+    description VARCHAR(800),
     nb_perso INTEGER,
     date_idee DATE,
     PRIMARY KEY (id)
