@@ -15,8 +15,8 @@
         //liaison des valeur
         $request->bindValue(':categorie', $_POST['categorie'], PDO::PARAM_STR);
         $request->bindValue(':desription', $_POST['description'], PDO::PARAM_STR);
-        $request->bindValue('nb_perso', $_POST['nb_perso'], PDO::PARAM_STR);
-        $request->bindValue('date_idee', date("Y-m-d"));
+        $request->bindValue(':nb_perso', $_POST['nb_perso'], PDO::PARAM_STR);
+        $request->bindValue(':date_idee', date("Y-m-d"));
 
         //exécution de la requête
         $insertValid = $request->execute();
