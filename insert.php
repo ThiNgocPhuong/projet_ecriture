@@ -1,7 +1,7 @@
 <?php
     //connexion à la database
-    $user="Phuong";
-    $pass="Ph@ntomhive";
+    $user="Caroline";
+    $pass="pingu";
 
     //variable message
     $mes="";
